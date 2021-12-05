@@ -1,0 +1,43 @@
+TensorFlow 2.0 Upgrade Script
+-----------------------------
+Converted 1 files
+Detected 0 issues that require attention
+--------------------------------------------------------------------------------
+================================================================================
+Detailed log follows:
+
+================================================================================
+--------------------------------------------------------------------------------
+Processing file './hello-linear2.py'
+ outputting to './hello-linear-v2.py'
+--------------------------------------------------------------------------------
+
+14:4: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+17:5: INFO: `name` passed to `name_scope`. Because you may be re-entering an existing scope, it is not safe to convert automatically,  the v2 name_scope does not support re-entering scopes by name.
+
+17:5: INFO: Renamed 'tf.name_scope' to 'tf.compat.v1.name_scope'
+22:9: INFO: tf.summary.histogram requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+22:9: INFO: Renamed 'tf.summary.histogram' to 'tf.compat.v1.summary.histogram'
+23:9: INFO: tf.summary.histogram requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+23:9: INFO: Renamed 'tf.summary.histogram' to 'tf.compat.v1.summary.histogram'
+24:9: INFO: tf.summary.histogram requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+24:9: INFO: Renamed 'tf.summary.histogram' to 'tf.compat.v1.summary.histogram'
+26:5: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+29:5: INFO: `name` passed to `name_scope`. Because you may be re-entering an existing scope, it is not safe to convert automatically,  the v2 name_scope does not support re-entering scopes by name.
+
+29:5: INFO: Renamed 'tf.name_scope' to 'tf.compat.v1.name_scope'
+30:11: INFO: Added keywords to args of function 'tf.reduce_mean'
+31:15: INFO: tf.summary.scalar requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+31:15: INFO: Renamed 'tf.summary.scalar' to 'tf.compat.v1.summary.scalar'
+34:5: INFO: `name` passed to `name_scope`. Because you may be re-entering an existing scope, it is not safe to convert automatically,  the v2 name_scope does not support re-entering scopes by name.
+
+34:5: INFO: Renamed 'tf.name_scope' to 'tf.compat.v1.name_scope'
+35:17: INFO: Renamed 'tf.train.GradientDescentOptimizer' to 'tf.compat.v1.train.GradientDescentOptimizer'
+47:7: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+50:9: INFO: tf.summary.merge_all requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+50:9: INFO: Renamed 'tf.summary.merge_all' to 'tf.compat.v1.summary.merge_all'
+51:9: INFO: tf.summary.FileWriter requires manual check. The TF 1.x summary API cannot be automatically migrated to TF 2.0, so symbols have been converted to tf.compat.v1.summary.* and must be migrated manually. Typical usage will only require changes to the summary writing logic, not to individual calls like scalar(). For examples of the new summary API, see the Effective TF 2.0 migration document or check the TF 2.0 TensorBoard tutorials.
+51:9: INFO: Renamed 'tf.summary.FileWriter' to 'tf.compat.v1.summary.FileWriter'
+53:7: INFO: Renamed 'tf.initialize_all_variables' to 'tf.compat.v1.initialize_all_variables'
+--------------------------------------------------------------------------------
+
