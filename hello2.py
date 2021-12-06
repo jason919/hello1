@@ -1,4 +1,16 @@
 import tensorflow as tf
+import os
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
+
+try:
+    # Disable all GPUS
+    tf.config.set_visible_devices([], 'GPU')
+    visible_devices = tf.config.get_visible_devices()
+    for device in visible_devices:
+        assert device.device_type != 'GPU'
+except:
+    # Invalid device or cannot modify virtual devices once initialized.
+    pass
 
 # W = tf.Variable(tf.ones(shape=(2, 2)), name="W")
 W = tf.Variable([[1, 3, 2], [4, 0, 1]], name="W")
@@ -24,5 +36,5 @@ tf.print(out_a)
 x, y = 3, 5
 print("x", x, "y", y)
 
-p1 = tf.reshape(3, [2, 2])
+p1 = tf.reshape(3, [1, 1])
 print("p1", p1)

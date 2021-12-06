@@ -4,16 +4,20 @@ import tensorflow as tf
 from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
 
-data = pd.read_csv('/Users/jason/Downloads/archive/Admission_Predict_Ver1.1.csv')
+data = pd.read_csv(
+    'C:/jason/projects/my/ml/ml-hello1/hello1/resources/Admission_Predict_Ver1.1.csv')
 data.head()
 
-continuous_features = data[['GRE Score', 'TOEFL Score', 'University Rating', 'SOP', 'LOR ', 'CGPA']].values / 100
+continuous_features = data[['GRE Score', 'TOEFL Score',
+                            'University Rating', 'SOP', 'LOR ', 'CGPA']].values / 100
 categorical_research_features = data[['Research']].values
 
-X = np.concatenate([continuous_features, categorical_research_features], axis=1)
+X = np.concatenate(
+    [continuous_features, categorical_research_features], axis=1)
 Y = data[['Chance of Admit ']].values
 
-train_features, test_features, train_labels, test_labels = train_test_split(X, Y, test_size=0.2)
+train_features, test_features, train_labels, test_labels = train_test_split(
+    X, Y, test_size=0.2)
 
 X = tf.constant(train_features, dtype=tf.float32)
 Y = tf.constant(train_labels, dtype=tf.float32)
